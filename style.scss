@@ -1,0 +1,427 @@
+/* ---- Varible -------- */
+
+$fontColor:#f1e1f1;
+$backgroundColor:#15151f;
+$spancolor:#4a11e7;
+
+/* ---- Varible -------- */
+
+
+/* ----- Basic Css ------*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Kalam;
+    background-color: $backgroundColor;
+    color: $fontColor;
+    padding: 0%;
+    margin: 0%;
+    overflow-x: hidden;
+    height: 400vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $fontColor;
+    font-weight: 700;
+}
+
+
+/* ----- Basic Css -----*/
+
+
+/*------ include ------*/
+
+@mixin mainText {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+@mixin margintext {
+    margin: 0px 10px;
+}
+
+@mixin margindwon {
+    margin: 20px 0px;
+}
+
+@mixin boder {
+    width: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+}
+
+@mixin width {
+    width: 800px;
+    height: auto;
+}
+
+@mixin section {
+    width: 100%;
+    height: 90vh;
+}
+
+@mixin h2size {
+    font-size: 3.5rem;
+    line-height: 80px;
+}
+
+@mixin display {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin but {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 12px 10px;
+    height: auto;
+    background-color: $spancolor;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+@mixin topleft {
+    top: 0%;
+    left: 0%;
+}
+
+@mixin boeder8 {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+@mixin boeder12 {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+@mixin formp {
+    outline: none;
+    border: none;
+    padding: 20px;
+    box-shadow: 3px 3px 2px 2px #0f0f12, -1px -1px 1px 1px #0f0f12;
+}
+
+
+/*------ include ------*/
+
+
+/* --------- navigation css ----------------*/
+
+nav {
+    @include mainText();
+    @include topleft();
+    position: fixed;
+    z-index: 5;
+}
+
+nav ul {
+    @include mainText();
+}
+
+nav ul li {
+    @include margintext();
+}
+
+nav ul li a {
+    @include margintext();
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: $spancolor;
+}
+
+.logo a strong {
+    font-size: 2.2rem;
+}
+
+.logo {
+    margin: 0px 500px 0px 0px;
+}
+
+
+/* --------- Home css ----------------*/
+
+#home {
+    margin-top: 70px
+}
+
+#home,
+#about,
+#skill,
+#work,
+#fotter,
+#contact {
+    @include mainText();
+    @include section();
+}
+
+#work,
+#fotter {
+    height: auto;
+}
+
+#fotter {
+    background-color: #141416;
+}
+
+#skill {
+    justify-content: center;
+}
+
+.home-text,
+.about-text {
+    @include width();
+    text-transform: capitalize;
+}
+
+#skill-text {
+    width: 90%;
+}
+
+.home-text h2,
+.about-text h1 {
+    @include h2size();
+}
+
+.home-text h2 span,
+.about-text strong {
+    color: $spancolor;
+}
+
+.home-img img,
+.about-skill {
+    @include boder();
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 35px;
+}
+
+.fa-brands {
+    padding: 10px;
+    font-size: 1.6rem;
+    border: #373737 1px solid;
+    border-radius: 6px;
+    @include margintext();
+}
+
+.fa-solid {
+    padding: 5px 8px;
+    font-size: 1rem;
+}
+
+.fa-brandsl :hover {
+    background-color: $spancolor;
+}
+
+.home-text-button {
+    @include display();
+}
+
+hr {
+    width: 400px;
+    height: 1px;
+    outline: none;
+    border: none;
+    background-color: $fontColor;
+}
+
+.model {
+    height: 700px;
+    position: absolute;
+    @include topleft();
+    left: 5px;
+    z-index: -1;
+}
+
+.but {
+    @include but();
+    margin: 20px 20px 0px 0px;
+}
+
+.about-but {
+    display: flex;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: $fontColor 1px solid;
+    margin: 20px 0px 0px 0px;
+}
+
+#form-1 {
+    margin-top: 90px;
+}
+
+.box-full {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin: 30px 0px 0px 0px;
+}
+
+.box-val {
+    width: 400px;
+    height: 1.2vh;
+    display: flex;
+    background-color: #f1e1f1;
+    @include boeder12();
+}
+
+.box-val span {
+    width: 78%;
+    height: 1.2vh;
+    display: flex;
+    background-color: $spancolor;
+    @include boeder12();
+}
+
+.box-icon-present {
+    @include display();
+    justify-content: space-between;
+}
+
+.box {
+    border: #f1e1f100 2px solid;
+    width: 400px;
+    margin-top: 70px;
+}
+
+.background {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+#box {
+    width: 90%;
+    height: auto;
+    @include boeder8();
+    padding: 5px;
+    margin-bottom: 70px;
+    box-shadow: 15px 15px 30px #0f0f12, -15px -15px 30px #0f0f12;
+}
+
+.box-icon-presente {
+    @include display();
+    display: block;
+}
+
+.box-icon-presente h3 {
+    color: $spancolor;
+}
+
+.box-icon-presente img {
+    width: 100%;
+    @include boeder8();
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid $fontColor;
+}
+
+form {
+    width: 820px;
+    height: auto;
+    padding: 20px 0px;
+}
+
+.form-sec-1 {
+    @include display();
+    justify-content: space-between;
+}
+
+.form-sec-1 input,
+form input {
+    width: 400px;
+    height: 56px;
+    @include boeder8();
+    margin: 8px 0px;
+    background-color: $backgroundColor;
+    @include formp();
+}
+
+form input {
+    width: 100%;
+    @include formp();
+}
+
+form input[type="submit"] {
+    width: 200px;
+    background-color: $spancolor;
+    color: $fontColor;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1rem;
+    @include formp();
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    @include boeder8();
+    margin: 10px 0px;
+    background-color: $backgroundColor;
+    @include formp();
+}
+
+.form-sec-2 {
+    width: 100%;
+    height: auto;
+}
+
+::placeholder {
+    color: $fontColor;
+    font-size: 1rem;
+}
+
+.sticky {
+    background-color: $backgroundColor;
+}
+
+.contact-local {
+    width: 400px;
+}
+
+.doc,
+#doc {
+    color: $spancolor;
+    font-size: 1.5rem;
+}
+
+#contact {
+    margin-bottom: 50px;
+}
